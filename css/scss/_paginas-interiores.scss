@@ -1,0 +1,77 @@
+.pagInterior {
+
+  &__img {
+    max-width: 100%;
+    border-radius: 30px;
+
+    @include movil {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fontNunito;
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      @include movil {
+        margin-bottom: 40px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .imgsLocal {
+
+    img {
+      max-width: 100%;
+      border-radius: 30px;
+
+      @include movil {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  iframe {
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+}
+
+.containerNJ, .containerDE {
+  .row {
+    -webkit-animation: entrada-left .5s cubic-bezier(.175,.885,.32,1.275) both;
+    animation: entrada-left .5s cubic-bezier(.175,.885,.32,1.275) both;
+
+    @for $cajita from 1 through 4 {
+      &:nth-child(#{$cajita}) {
+          animation-delay: .8s + .1s * $cajita;
+      }
+    }
+  }
+}
+
+.botonGrandeNJ, .botonGrandeDE {
+  -webkit-animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .4s both;
+  animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .4s both;
+}
+
+.botonGrandeNL {
+  -webkit-animation: entrada-bot .6s cubic-bezier(.23,1.000,.32,1.000) 1s both;
+  animation: entrada-bot .6s cubic-bezier(.23,1.000,.32,1.000) 1s both;
+}

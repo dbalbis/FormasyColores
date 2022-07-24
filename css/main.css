@@ -494,6 +494,16 @@ footer .footer__redes a {
   color: #f07434;
 }
 
+.botonGrande__naranja:hover::-moz-selection {
+  background: #f07434;
+  color: white;
+}
+
+.botonGrande__naranja:hover::selection {
+  background: #f07434;
+  color: white;
+}
+
 .botonGrande__naranja::-moz-selection {
   background: white;
   color: #f07434;
@@ -511,6 +521,16 @@ footer .footer__redes a {
 
 .botonGrande__amarillo:hover {
   color: #f7b835;
+}
+
+.botonGrande__amarillo:hover::-moz-selection {
+  background: #f7b835;
+  color: white;
+}
+
+.botonGrande__amarillo:hover::selection {
+  background: #f7b835;
+  color: white;
 }
 
 .botonGrande__amarillo::-moz-selection {
@@ -532,6 +552,16 @@ footer .footer__redes a {
   color: #e63538;
 }
 
+.botonGrande__rojo:hover::-moz-selection {
+  background: #e63538;
+  color: white;
+}
+
+.botonGrande__rojo:hover::selection {
+  background: #e63538;
+  color: white;
+}
+
 .botonGrande__rojo::-moz-selection {
   background: white;
   color: #e63538;
@@ -549,6 +579,16 @@ footer .footer__redes a {
 
 .botonGrande__rosa:hover {
   color: #d32d86;
+}
+
+.botonGrande__rosa:hover::-moz-selection {
+  background: #d32d86;
+  color: white;
+}
+
+.botonGrande__rosa:hover::selection {
+  background: #d32d86;
+  color: white;
 }
 
 .botonGrande__rosa::-moz-selection {
@@ -570,6 +610,16 @@ footer .footer__redes a {
   color: #8c3fbd;
 }
 
+.botonGrande__violeta:hover::-moz-selection {
+  background: #8c3fbd;
+  color: white;
+}
+
+.botonGrande__violeta:hover::selection {
+  background: #8c3fbd;
+  color: white;
+}
+
 .botonGrande__violeta::-moz-selection {
   background: white;
   color: #8c3fbd;
@@ -587,6 +637,16 @@ footer .footer__redes a {
 
 .botonGrande__celeste:hover {
   color: #08adda;
+}
+
+.botonGrande__celeste:hover::-moz-selection {
+  background: #08adda;
+  color: white;
+}
+
+.botonGrande__celeste:hover::selection {
+  background: #08adda;
+  color: white;
 }
 
 .botonGrande__celeste::-moz-selection {
@@ -608,6 +668,16 @@ footer .footer__redes a {
   color: #336e6e;
 }
 
+.botonGrande__verde:hover::-moz-selection {
+  background: #336e6e;
+  color: white;
+}
+
+.botonGrande__verde:hover::selection {
+  background: #336e6e;
+  color: white;
+}
+
 .botonGrande__verde::-moz-selection {
   background: white;
   color: #336e6e;
@@ -625,6 +695,16 @@ footer .footer__redes a {
 
 .botonGrande__verdeClaro:hover {
   color: #00bb2d;
+}
+
+.botonGrande__verdeClaro:hover::-moz-selection {
+  background: #00bb2d;
+  color: white;
+}
+
+.botonGrande__verdeClaro:hover::selection {
+  background: #00bb2d;
+  color: white;
 }
 
 .botonGrande__verdeClaro::-moz-selection {
@@ -781,98 +861,100 @@ footer .footer__redes a {
   background: white;
 }
 
-.Titulos {
-  -webkit-animation: entrada-bot 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s both;
-  animation: entrada-bot 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s both;
+.pagInterior__img {
+  max-width: 100%;
+  border-radius: 30px;
 }
 
-.cajaTitulos {
+@media screen and (max-width: 576px) {
+  .pagInterior__img {
+    margin-bottom: 20px;
+  }
+}
+
+.pagInterior__texto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 50px 0;
-  gap: 20px;
-  grid-gap: 20px;
-}
-
-@media screen and (max-width: 576px) {
-  .cajaTitulos {
-    padding: 50px 30px;
-    margin-bottom: 5px;
-  }
-}
-
-.cajaTitulos__rojo {
-  background-color: #e63538;
-  border-color: #e63538;
-}
-
-.cajaTitulos__rojo:hover {
-  color: #e63538;
-}
-
-.cajaTitulos__rojo::-moz-selection {
-  background: white;
-  color: #e63538;
-}
-
-.cajaTitulos__rojo::selection {
-  background: white;
-  color: #e63538;
-}
-
-.container__maps iframe {
-  overflow: hidden;
-  border-radius: 10%;
-}
-
-.vertical__Align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contacto__descripcion p {
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Nunito", sans-serif;
-  font-size: 1.4em;
+}
+
+.pagInterior__texto h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pagInterior__texto h5 {
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 @media screen and (max-width: 576px) {
-  p.contacto__texto {
-    margin-bottom: 50px;
+  .pagInterior__texto h5 {
+    margin-bottom: 40px;
   }
+}
+
+.pagInterior__texto p {
+  font-size: 1.2rem;
+}
+
+.pagInterior .imgsLocal img {
+  max-width: 100%;
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 576px) {
-  .vertical__Align {
-    padding-top: -80px;
+  .pagInterior .imgsLocal img {
+    margin-bottom: 20px;
   }
 }
 
-.container__local {
-  margin-bottom: 50px;
+.pagInterior iframe {
+  border-radius: 30px;
+  overflow: hidden;
+  max-width: 100%;
 }
 
-.container__local img {
-  border-radius: 10%;
-  width: 355px;
-  height: auto;
+.containerNJ .row, .containerDE .row {
+  -webkit-animation: entrada-left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: entrada-left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
-@media screen and (max-width: 576px) {
-  .container__local img {
-    margin-bottom: 25px;
-  }
+.containerNJ .row:nth-child(1), .containerDE .row:nth-child(1) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.containerNJ .row:nth-child(2), .containerDE .row:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.containerNJ .row:nth-child(3), .containerDE .row:nth-child(3) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+.containerNJ .row:nth-child(4), .containerDE .row:nth-child(4) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.botonGrandeNJ, .botonGrandeDE {
+  -webkit-animation: entrada-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.4s both;
+  animation: entrada-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.4s both;
+}
+
+.botonGrandeNL {
+  -webkit-animation: entrada-bot 0.6s cubic-bezier(0.23, 1, 0.32, 1) 1s both;
+  animation: entrada-bot 0.6s cubic-bezier(0.23, 1, 0.32, 1) 1s both;
 }
 /*# sourceMappingURL=main.css.map */

@@ -42,6 +42,11 @@
 
       &:hover {
         color: $codigo;
+
+        &::selection {
+          background: $codigo;
+          color: white;
+        }
       }
 
       &::selection {
