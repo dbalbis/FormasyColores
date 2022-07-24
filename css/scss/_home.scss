@@ -1,0 +1,117 @@
+.hero {
+    background-image: url('../img/hero-shape.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    -webkit-animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .4s both;
+    animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .4s both;
+
+    @include movil {
+        background-image: url('../img/hero-mobile.svg');
+        height: auto;
+    }
+
+    &__izq {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        -webkit-animation: entrada-left .5s cubic-bezier(.175,.885,.32,1.275) .6s both;
+        animation: entrada-left .5s cubic-bezier(.175,.885,.32,1.275) .6s both;
+
+        @include movil {
+            justify-content: flex-start;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__titulo {
+        width: 100%;
+
+        img {
+            max-width: 100%;
+            margin-top: -4rem;
+
+            @include movil {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $principal;
+        border: 3px solid white;
+        padding: 12px 24px;
+        border-radius: 100px;
+        line-height: 1;
+        font-family: $fontNunito;
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: white;
+        transition: background-color .1s ease-in-out;
+
+        &:hover {
+            background-color: $rosa;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    &__der {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-animation: entrada-right .5s cubic-bezier(.175,.885,.32,1.275) .8s both;
+        animation: entrada-right .5s cubic-bezier(.175,.885,.32,1.275) .8s both;
+
+        @include movil {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+      
+}
+
+.swiffy-slider {
+    -webkit-animation: entrada-bot .5s cubic-bezier(.175,.885,.32,1.275) .9s both;
+    animation: entrada-bot .5s cubic-bezier(.175,.885,.32,1.275) .9s both;
+
+    @include movil {
+        display: none;
+    }
+
+    .slider-nav {
+
+        &:focus-visible {
+            outline: 0;
+        }
+    }
+}
+
+.botonesHome {
+    -webkit-animation: entrada-bot .5s cubic-bezier(.175,.885,.32,1.275) 1s both;
+    animation: entrada-bot .5s cubic-bezier(.175,.885,.32,1.275) 1s both;
+}
+
+
+.letracontenedor {
+
+    .letra {
+        color: $violeta;
+    }
+
+    .fondoletra {
+        background: white;
+    }
+}

@@ -1,0 +1,53 @@
+.botonesGrandes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  gap: 20px;
+  grid-gap: 20px;
+
+  @include movil {
+    padding: 50px 30px;
+  }
+}
+
+.botonGrande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-size: 2.2rem;
+  font-family: $fontNunito;
+  font-weight: 800;
+  padding: 10px 0;
+  border-radius: 100px;
+  line-height: 1;
+  border: 8px solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: center;
+
+  @include movil {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+
+  @each $nombre, $codigo in $colores {
+    &__#{$nombre} {
+      background-color: $codigo;
+      border-color: $codigo;
+
+      &:hover {
+        color: $codigo;
+      }
+
+      &::selection {
+        background: white;
+        color: $codigo;
+      }
+    }
+  }
+}

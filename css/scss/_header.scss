@@ -1,0 +1,94 @@
+.navbar {
+    background-color: #67b0d8;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    -webkit-animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .1s both;
+    animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .1s both;
+
+    .navbar-brand {
+        -webkit-animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .2s both;
+        animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .2s both;
+    }
+
+    .navbarItems {
+        justify-content: flex-end;
+
+        .navbar-nav {
+            gap: 25px;
+
+            @include movil {
+                gap: 0;
+                border-bottom: 2px solid $verde;
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            color: white;
+            padding-right: 0;
+            padding-left: 0;
+            font-family: $fontNunito;
+            font-weight: 600;
+            font-size: 1rem;
+        
+            @include movil {
+                text-align: center;
+                font-size: 1.2rem;
+            }
+
+            &:after {
+                content: '';
+                width: 0;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: width .2s ease-out;
+
+                @include movil {
+                    display: none;
+                }
+            }
+
+            @each $nombre, $codigo in $colores {
+              &__#{$nombre} {
+                  &:after {
+                    background-color: $codigo;
+                  }
+
+                  &::selection {
+                      background-color: $codigo;
+                  }
+              }
+            }
+
+            &:hover, &.active {
+                color: white;
+
+                @include movil {
+                    font-weight: 900;
+                }
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+
+    .navbar-toggler {
+        border: 0;
+        -webkit-animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .3s both;
+        animation: entrada-top .6s cubic-bezier(.23,1.000,.32,1.000) .3s both;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+        }
+    }
+}

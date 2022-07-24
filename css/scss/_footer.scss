@@ -1,0 +1,47 @@
+footer {
+    background-color: $principal;
+    color: white;
+    padding: 15px 0;
+
+    *::selection {
+        background: $rojo;
+    }
+
+    .footer {
+
+        @include movil {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__contacto {
+            font-size: 1.1rem;
+            color: white;
+
+            a {
+                color: white;
+            }
+
+            @include movil {
+                text-align: center;
+            }
+        }
+
+        &__redes {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+
+            @include movil {
+                justify-content: center;
+            }
+            
+            a {
+                color: white;
+                font-size: 3rem;
+            }
+        }
+    }
+}
